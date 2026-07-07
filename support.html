@@ -79,11 +79,22 @@
 <div class="contact">
 <p><strong>お問い合わせ</strong></p>
 <p>解決しないときは、お気軽にメールでご連絡ください。<br>
-<a href="mailto:studio.appworks.em@gmail.com">studio.appworks.em@gmail.com</a></p>
+<span id="contact-mail"></span></p>
 <p>Instagram：<a href="https://www.instagram.com/clipfilm.app/">@clipfilm.app</a></p>
 <p><a href="./privacy.html">プライバシーポリシーはこちら</a></p>
 </div>
 
 <footer>CLIP FILM · STUDIO APPWORKS</footer>
+
+<script>
+// 迷惑メール業者の自動収集を避けるため、アドレスを部品に分けて表示時に組み立てる
+(function () {
+  var u = "studio.appworks.em";
+  var d = "gmail" + "." + "com";
+  var a = u + "@" + d;
+  var el = document.getElementById("contact-mail");
+  el.innerHTML = '<a href="mailto:' + a + '">' + a + "</a>";
+})();
+</script>
 </body>
 </html>
